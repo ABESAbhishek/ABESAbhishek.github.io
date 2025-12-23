@@ -1,0 +1,324 @@
+/* ----------------- RESET ----------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;              /* no page horizontal scroll */
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ----------------- HERO ----------------- */
+.hero {
+  position: relative;
+  height: 100vh;
+
+  /* use your local image here */
+  background-image: url("/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-fullview.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  border-bottom: 8px solid #222;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(0,0,0,0.4), #000 70%);
+}
+
+/* ----------------- NAVBAR ----------------- */
+.nav {
+  position: relative;
+  z-index: 2;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #e50914;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lang,
+.footer-lang {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #888;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+/* ----------------- BUTTONS ----------------- */
+.btn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #f40612;
+}
+
+.btn-get-started {
+  font-size: 18px;
+  padding: 12px 26px;
+}
+
+/* ----------------- HERO CONTENT ----------------- */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 160px auto 0;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.hero-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* ----------------- EMAIL FORM (reused) ----------------- */
+.email-form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.email-form input {
+  min-width: 280px;
+  max-width: 500px;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+/* ----------------- TRENDING NOW ----------------- */
+.trending {
+  padding: 40px 4vw 10px;
+  background: #000;
+}
+
+.trending h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.cards-row {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;          /* allow horizontal scroll */
+  padding-bottom: 15px;
+
+  /* hide scrollbar in all major browsers */
+  -ms-overflow-style: none;  /* IE and old Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* WebKit browsers (Chrome, Edge, Safari, Opera) */
+.cards-row::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  width: 180px;
+  flex: 0 0 auto;
+}
+
+.poster {
+  width: 100%;
+  height: 250px;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+}
+
+.rank {
+  position: absolute;
+  bottom: -18px;        /* push number further down */
+  left: -14px;          /* push number further left */
+  font-size: 3.2rem;    /* a bit smaller so it overlaps less */
+  font-weight: 900;
+  color: #fff;
+  -webkit-text-stroke: 3px #000;
+  line-height: 0.9;     /* tighten vertical space */
+}
+
+
+/* ----------------- MORE REASONS ----------------- */
+.reasons {
+  padding: 40px 4vw 50px;
+  background: #000;
+}
+
+.reasons h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.reason-card {
+  background: radial-gradient(circle at top, #3b3b98, #000428);
+  border-radius: 12px;
+  padding: 18px 16px 24px;
+}
+
+.reason-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.reason-card p {
+  font-size: 0.95rem;
+}
+
+/* ----------------- FAQ ----------------- */
+.faq {
+  padding: 50px 8vw;
+  border-top: 8px solid #222;
+  border-bottom: 8px solid #222;
+  background: #000;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.faq-item {
+  background: #303030;
+  color: #fff;
+  padding: 22px 26px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.faq-item:hover {
+  background: #454545;
+}
+
+.plus {
+  font-size: 2rem;
+}
+
+.faq-bottom-text {
+  margin: 28px 0 10px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* ----------------- FOOTER ----------------- */
+.footer {
+  padding: 40px 8vw 60px;
+  background: #000;
+  color: #757575;
+}
+
+.footer-top {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.footer a {
+  color: #757575;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-lang {
+  margin-bottom: 20px;
+}
+
+.country {
+  font-size: 0.9rem;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 768px) {
+  .nav {
+    padding: 16px 20px;
+  }
+
+  .hero-content {
+    margin-top: 120px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .cards-row {
+    gap: 12px;
+  }
+
+  .card {
+    width: 140px;
+  }
+
+  .poster {
+    height: 200px;
+  }
+}
