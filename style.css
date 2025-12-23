@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;              /* no page horizontal scroll */
+html,
+body {
+  overflow-x: hidden;              /* prevent page horizontal scroll */
 }
 
 body {
@@ -113,7 +114,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* ----------------- EMAIL FORM (reused) ----------------- */
+/* ----------------- EMAIL FORM ----------------- */
 .email-form {
   margin-top: 20px;
   display: flex;
@@ -146,10 +147,10 @@ body {
 .cards-row {
   display: flex;
   gap: 18px;
-  overflow-x: auto;          /* allow horizontal scroll */
+  overflow-x: auto;          /* scrollable horizontally */
   padding-bottom: 15px;
 
-  /* hide scrollbar in all major browsers */
+  /* hide scrollbar but keep scroll */
   -ms-overflow-style: none;  /* IE and old Edge */
   scrollbar-width: none;     /* Firefox */
 }
@@ -173,17 +174,16 @@ body {
   display: block;
 }
 
+/* rank number adjusted so it doesn't cover poster too much */
 .rank {
   position: absolute;
-  bottom: -18px;        /* push number further down */
-  left: -14px;          /* push number further left */
-  font-size: 3.2rem;    /* a bit smaller so it overlaps less */
+  bottom: -18px;           /* moved further below card */
+  left: -4px;
+  font-size: 3.5rem;       /* slightly smaller */
   font-weight: 900;
   color: #fff;
   -webkit-text-stroke: 3px #000;
-  line-height: 0.9;     /* tighten vertical space */
 }
-
 
 /* ----------------- MORE REASONS ----------------- */
 .reasons {
@@ -292,33 +292,161 @@ body {
   font-size: 0.9rem;
 }
 
-/* ----------------- RESPONSIVE ----------------- */
+/* ----------------- RESPONSIVE (phones & tablets) ----------------- */
 @media (max-width: 768px) {
+
+  /* overall spacing */
   .nav {
-    padding: 16px 20px;
+    padding: 12px 12px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+
+  .hero {
+    height: 90vh;
+    border-bottom-width: 6px;
   }
 
   .hero-content {
-    margin-top: 120px;
+    margin-top: 90px;
+    padding: 0 14px;
   }
 
   .hero-content h1 {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
+    line-height: 1.2;
   }
 
   .hero-content h2 {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .email-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .email-form input {
+    width: 100%;
+    max-width: none;
+  }
+
+  .btn-get-started {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+
+  /* trending row on phones */
+  .trending {
+    padding: 24px 10px 4px;
+  }
+
+  .trending h2 {
     font-size: 1.2rem;
+    margin-bottom: 14px;
   }
 
   .cards-row {
-    gap: 12px;
+    gap: 10px;
+    padding-bottom: 14px;
+    scroll-snap-type: x mandatory;   /* smoother card-by-card snapping */
   }
 
   .card {
-    width: 140px;
+    width: 130px;
+    scroll-snap-align: start;
   }
 
   .poster {
-    height: 200px;
+    height: 190px;
+  }
+
+  .rank {
+    bottom: -20px;          /* clearly below the poster */
+    left: 0;
+    font-size: 2.8rem;
+    -webkit-text-stroke: 2px #000;
+  }
+
+  /* reasons section */
+  .reasons {
+    padding: 24px 10px 30px;
+  }
+
+  .reasons h2 {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+  }
+
+  .reason-card {
+    padding: 14px 12px 18px;
+  }
+
+  .reason-card h3 {
+    font-size: 1rem;
+  }
+
+  .reason-card p {
+    font-size: 0.9rem;
+  }
+
+  /* FAQ section */
+  .faq {
+    padding: 30px 10px;
+    border-width: 6px 0;
+  }
+
+  .faq h2 {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .faq-item {
+    padding: 16px 14px;
+    font-size: 1rem;
+  }
+
+  .plus {
+    font-size: 1.4rem;
+  }
+
+  .faq-bottom-text {
+    font-size: 0.95rem;
+    margin-top: 20px;
+  }
+
+  /* footer */
+  .footer {
+    padding: 24px 10px 36px;
+  }
+
+  .footer-top {
+    font-size: 0.8rem;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .footer a {
+    font-size: 0.8rem;
+  }
+
+  .country {
+    font-size: 0.8rem;
   }
 }
