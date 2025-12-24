@@ -13,27 +13,30 @@
 
     <!-- NAVBAR -->
     <nav class="nav">
-      <!-- local Netflix logo asset -->
-      <img src="/red-large-netflix-logo-text-701751694792625tjldcsq74b.png" alt="Netflix" class="logo-img" />
+      <!-- CSS-only Netflix-style logo -->
+      <div class="nf-logo"></div>
 
       <div class="nav-right">
-        <select class="lang">
-          <option>English</option>
-          <option>हिन्दी</option>
-        </select>
-        <button class="btn">Sign In</button>
+        <button class="lang-btn">
+          <span class="lang-icon">🌐</span>
+          <span>English</span>
+          <span class="lang-arrow">▾</span>
+        </button>
+        <button class="btn btn-signin">Sign In</button>
       </div>
     </nav>
 
     <!-- HERO CONTENT -->
     <div class="hero-content">
-      <h1>Unlimited movies, TV shows and more</h1>
-      <h2>Watch anywhere. Cancel anytime.</h2>
+      <h1>Unlimited movies, shows, and more</h1>
+      <h2>Starts at ₹149. Cancel at any time.</h2>
       <p>Ready to watch? Enter your email to create or restart your membership.</p>
 
       <form class="email-form">
         <input type="email" placeholder="Email address" required />
-        <button type="submit" class="btn btn-get-started">Get Started &gt;</button>
+        <button type="submit" class="btn btn-get-started">
+          Get Started &gt;
+        </button>
       </form>
     </div>
   </section>
@@ -41,31 +44,43 @@
   <!-- TRENDING NOW -->
   <section class="trending">
     <h2>Trending Now</h2>
+
     <div class="cards-row">
+      <!-- left grey bar -->
+      <div class="edge-bar"></div>
+
+      <!-- cards with your own posters -->
       <div class="card">
-        <img src="/images (1).jpg" class="poster" alt="Poster 1" />
+        <img src="/images (1).jpg" alt="Movie 1" class="poster" />
         <span class="rank">1</span>
       </div>
       <div class="card">
-        <img src="/images (2).jpg" class="poster" alt="Poster 2" />
+        <img src="/images (2).jpg" alt="Movie 2" class="poster" />
         <span class="rank">2</span>
       </div>
       <div class="card">
-        <img src="/images (3).jpg" class="poster" alt="Poster 3" />
+        <img src="/images (3).jpg" alt="Movie 3" class="poster" />
         <span class="rank">3</span>
       </div>
       <div class="card">
-        <img src="/image(4).jpg" class="poster" alt="Poster 4" />
+        <img src="/image(4).jpg" alt="Movie 4" class="poster" />
         <span class="rank">4</span>
       </div>
       <div class="card">
-        <img src="/image(5).jpg" class="poster" alt="Poster 5" />
+        <img src="/image(5).jpg" alt="Movie 5" class="poster" />
         <span class="rank">5</span>
       </div>
       <div class="card">
-        <img src="/image(6).jpg" class="poster" alt="Poster 6" />
+        <img src="/image(6).jpg" alt="Movie 6" class="poster" />
         <span class="rank">6</span>
       </div>
+      <div class="card">
+        <img src="/Kaala_Paani_poster.png" alt="Movie 7" class="poster" />
+        <span class="rank">7</span>
+      </div>
+
+      <!-- right grey bar -->
+      <div class="edge-bar"></div>
     </div>
   </section>
 
@@ -75,19 +90,30 @@
     <div class="reason-grid">
       <div class="reason-card">
         <h3>Enjoy on your TV</h3>
-        <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu‑ray players and more.</p>
+        <p>
+          Watch on smart TVs, PlayStation, Xbox, Chromecast,
+          Apple TV, Blu‑ray players and more.
+        </p>
       </div>
       <div class="reason-card">
-        <h3>Download to watch offline</h3>
-        <p>Save your favourites easily and always have something to watch.</p>
+        <h3>Download your shows to watch offline</h3>
+        <p>
+          Save your favourites easily and always have something to watch.
+        </p>
       </div>
       <div class="reason-card">
         <h3>Watch everywhere</h3>
-        <p>Stream on your phone, tablet, laptop and TV without paying more.</p>
+        <p>
+          Stream unlimited movies and TV shows on your phone,
+          tablet, laptop, and TV.
+        </p>
       </div>
       <div class="reason-card">
         <h3>Create profiles for kids</h3>
-        <p>Send children on adventures with their favourite characters in a space made just for them.</p>
+        <p>
+          Send kids on adventures with their favourite characters in a space
+          made just for them — free with your membership.
+        </p>
       </div>
     </div>
   </section>
@@ -119,35 +145,56 @@
 
     <form class="email-form">
       <input type="email" placeholder="Email address" required />
-      <button type="submit" class="btn btn-get-started">Get Started &gt;</button>
+      <button type="submit" class="btn btn-get-started">
+        Get Started &gt;
+      </button>
     </form>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p class="footer-top">Questions? Call 000‑800‑919‑1694</p>
+    <p class="footer-top">
+      Questions? Call <a href="#">000-800-919-1743</a>
+    </p>
 
-    <div class="footer-links">
-      <a href="#">FAQ</a>
-      <a href="#">Help Centre</a>
-      <a href="#">Account</a>
-      <a href="#">Media Centre</a>
-      <a href="#">Investor Relations</a>
-      <a href="#">Jobs</a>
-      <a href="#">Ways to Watch</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Privacy</a>
-      <a href="#">Cookie Preferences</a>
-      <a href="#">Corporate Information</a>
-      <a href="#">Contact Us</a>
+    <div class="footer-links footer-columns">
+      <div>
+        <a href="#">FAQ</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Privacy</a>
+        <a href="#">Speed Test</a>
+      </div>
+      <div>
+        <a href="#">Help Centre</a>
+        <a href="#">Jobs</a>
+        <a href="#">Cookie Preferences</a>
+        <a href="#">Legal Notices</a>
+      </div>
+      <div>
+        <a href="#">Account</a>
+        <a href="#">Ways to Watch</a>
+        <a href="#">Corporate Information</a>
+        <a href="#">Only on Netflix</a>
+      </div>
+      <div>
+        <a href="#">Media Centre</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact Us</a>
+      </div>
     </div>
 
-    <select class="footer-lang">
-      <option>English</option>
-      <option>हिन्दी</option>
-    </select>
+    <button class="lang-btn footer-lang-btn">
+      <span class="lang-icon">🌐</span>
+      <span>English</span>
+      <span class="lang-arrow">▾</span>
+    </button>
 
     <p class="country">Netflix India</p>
+
+    <p class="recaptcha-text">
+      This page is protected by Google reCAPTCHA to ensure you’re not a bot.
+      <a href="#">Learn more.</a>
+    </p>
   </footer>
 
 </body>
