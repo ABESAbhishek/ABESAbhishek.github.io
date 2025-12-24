@@ -4,43 +4,47 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   overflow-x: hidden;
 }
+
 body {
   background: #000;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 /* ----------------- HERO ----------------- */
 .hero {
   position: relative;
-  height: 100vh;
-  background-image: url("/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-fullview.jpg");
+  min-height: 100vh;
+  background-image: url("/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-fullview.jpg"); /* your hero image */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   border-bottom: 8px solid #222;
 }
+
 .overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(0,0,0,0.4), #000 70%);
+  background: radial-gradient(circle at top, rgba(0,0,0,0.1), rgba(0,0,0,0.75));
 }
 
 /* ----------------- NAVBAR ----------------- */
 .nav {
   position: relative;
   z-index: 2;
-  padding: 18px 60px;
+  padding: 18px 4vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo-img {
-  height: 32px;
+  height: 36px;
 }
 
 .nav-right {
@@ -74,53 +78,55 @@ body {
 }
 
 .btn-get-started {
-  font-size: 18px;
-  padding: 12px 26px;
+  font-size: 1.1rem;
+  padding: 0 26px;
+  border-radius: 4px;
 }
 
 /* ----------------- HERO CONTENT ----------------- */
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  margin: 160px auto 0;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 180px 4vw 140px;
   text-align: center;
-  padding: 0 20px;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 4vw + 1.5rem, 4rem);
   font-weight: 900;
-  margin-bottom: 20px;
+  line-height: 1.1;
+  margin-bottom: 24px;
 }
 
 .hero-content h2 {
-  font-size: 1.6rem;
-  margin-bottom: 18px;
-  font-weight: 500;
+  font-size: clamp(1.1rem, 1.5vw + 0.9rem, 1.6rem);
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 /* ----------------- EMAIL FORM ----------------- */
 .email-form {
-  margin-top: 20px;
-  display: flex;
+  margin-top: 26px;
+  display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .email-form input {
-  min-width: 280px;
+  min-width: 320px;
   max-width: 500px;
-  padding: 14px;
-  font-size: 16px;
+  padding: 16px 14px;
+  font-size: 1rem;
   border: none;
   outline: none;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 /* ----------------- TRENDING NOW ----------------- */
@@ -140,12 +146,12 @@ body {
   overflow-x: auto;
   padding-bottom: 15px;
 
-  -ms-overflow-style: none;   /* IE/old Edge */
-  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;  /* IE/old Edge */
+  scrollbar-width: none;     /* Firefox */
 }
 
 .cards-row::-webkit-scrollbar {
-  display: none;              /* Chrome/Edge/Safari */
+  display: none;             /* Chrome/Edge/Safari */
 }
 
 .card {
@@ -162,7 +168,7 @@ body {
   display: block;
 }
 
-/* numbers adjusted so they don't hide poster */
+/* ranking numbers kept off poster */
 .rank {
   position: absolute;
   bottom: -18px;
@@ -297,23 +303,20 @@ body {
   }
 
   .hero {
-    height: 90vh;
+    min-height: auto;
     border-bottom-width: 6px;
   }
 
   .hero-content {
-    margin-top: 90px;
-    padding: 0 14px;
+    padding: 120px 6vw 80px;
   }
 
   .hero-content h1 {
     font-size: 2.1rem;
-    line-height: 1.2;
   }
 
   .hero-content h2 {
     font-size: 1.05rem;
-    margin-bottom: 12px;
   }
 
   .hero-content p {
@@ -325,15 +328,9 @@ body {
     align-items: stretch;
   }
 
-  .email-form input {
-    width: 100%;
-    max-width: none;
-  }
-
+  .email-form input,
   .btn-get-started {
     width: 100%;
-    font-size: 1rem;
-    padding: 12px 0;
   }
 
   .trending {
@@ -380,10 +377,6 @@ body {
     padding: 14px 12px 18px;
   }
 
-  .reason-card p {
-    font-size: 0.9rem;
-  }
-
   .faq {
     padding: 30px 10px;
     border-width: 6px 0;
@@ -423,3 +416,4 @@ body {
     gap: 8px;
   }
 }
+/* ----------------- END OF STYLE.CSS ----------------- */
